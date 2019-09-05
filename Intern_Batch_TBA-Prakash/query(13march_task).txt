@@ -1,0 +1,29 @@
+qn.)
+soln:-db.restaurants.find().pretty()
+qn2.)
+soln:-db.restaurants.find({},{restaurant_id:1,"name":1,"borough":1,"cuisine":1}).pretty()
+qn3.)
+soln:-db.restaurants.find({},{"restaurant_id":1,_id:0,"name":1,"borough":1,"cuisine":1}).pretty()
+qn4.)
+soln:-
+db.restaurants.find({},{address.zipcode:1,"restaurant_id":1,_id:0,"name":1,"borough":1}).pretty()
+qn5.)
+soln:-db.restaurants.find({"borough": "Bronx"}).pretty()
+qn6.)
+soln:-db.restaurants.find({grade:{$elemMatch:{"Score":{$gt:90}}}}).pretty()
+qn7.)
+soln:-db.restaurants.find({grade:{$elemMatch:{"score":{$gt:80,$lt:100}}}}).pretty()
+qn8.)
+soln:-db.restaurants.find( {$and:[  {    "cuisine" : {$ne : "American "},"grades.grade" :"A","borough": {$ne : "Brooklyn"}}]}).sort({"cuisine":-1}).pretty()
+9).
+soln:-db.restaurants.find({},
+
+{
+"restaurant_id" : 1,
+"name":1,"borough":1,
+"cuisine" :1,{"name": /.Reg./}
+}
+)
+10.)
+sol:-db.restaurants.find({"address.coord.1": {$gt : 42, $lte : 52}},{"restaurant_id" : 1,"name":1,"address":1,"coord":1}
+);

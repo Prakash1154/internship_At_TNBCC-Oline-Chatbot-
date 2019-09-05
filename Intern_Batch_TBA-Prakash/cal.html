@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  </head>
+<body>
+<div class="row">
+  <h1>Calculator</h1>
+</div> 
+<br>
+  <div class="container">
+  <form action="http://127.0.0.1:5000/cal" method="POST">
+    
+  <div class="form-group">
+   <p>Enter first number:</p>
+   <input type='text' class="form-control"  name="val1">
+   <br>
+   <p>Enter second number:</p>
+  <input type='text' class="form-control" name="val2">
+
+   <br>
+   <p>Enter choise 1 to 5 </p><br>
+   <p>1)Add,2)sub,3)mul,4)div,5)mod</p>
+  <input type='text' class="form-control" name="val3">
+   <br>
+   <input type='submit' class="btn btn-info" value="Submit">
+   <br>
+   <br>
+<h3>Result</h3>
+<h4>{{res}}</h4>
+ </form>
+ </div>
+ </div>
+ <script src="jquery.js.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
